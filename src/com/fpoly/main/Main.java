@@ -1,6 +1,5 @@
 package com.fpoly.main;
 
-import com.fpoly.DAO.AnswerAndQuestionDao;
 import com.fpoly.DAO.QuestionExerciseDAO;
 import com.fpoly.DAO.SubjectDAO;
 import com.fpoly.DAO.TheorryDAO;
@@ -38,7 +37,6 @@ import java.text.ParseException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 import net.miginfocom.swing.MigLayout;
 import org.jdesktop.animation.timing.Animator;
 import org.jdesktop.animation.timing.TimingTarget;
@@ -338,6 +336,17 @@ public class Main extends javax.swing.JFrame {
             int y1 = Main.this.getY() + com.getY() + 86;
             popup.setLocation(x1, y1);
             popup.setVisible(true);
+        });
+        menu.addHomeEvent(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                try {
+                    main.showForm(new FormHome());
+                } catch (ParseException ex) {
+                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            
         });
         menu.initMenuItem();
 

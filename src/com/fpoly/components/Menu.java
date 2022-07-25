@@ -4,13 +4,10 @@ import com.fpoly.DAO.SubjectDAO;
 import com.fpoly.event.EventMenu;
 import com.fpoly.event.EventMenuSelected;
 import com.fpoly.event.EventShowPopupMenu;
-import com.fpoly.main.LoginForm1;
-import com.fpoly.main.Main;
 import com.fpoly.models.ModelMenu;
 import com.fpoly.models.Subject;
 import com.fpoly.swing.MenuAnimation;
 import com.fpoly.swing.MenuItem;
-import com.fpoly.swing.button2;
 import com.fpoly.swing.scrollbar.ScrollBarCustom;
 import com.fpoly.utils.Auth;
 import java.awt.Color;
@@ -19,12 +16,10 @@ import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Arrays;
+import java.awt.event.MouseAdapter;
 import java.util.List;
 import javax.swing.ImageIcon;
-import javax.swing.border.EmptyBorder;
 import net.miginfocom.swing.MigLayout;
 
 public class Menu extends javax.swing.JPanel {
@@ -153,6 +148,10 @@ public class Menu extends javax.swing.JPanel {
     
     public void addExitEvent(ActionListener event) {
         btnExit.addActionListener(event);
+    }
+    
+    public void addHomeEvent(MouseAdapter event) {
+        profile1.addMouseListener(event);
     }
 
     @SuppressWarnings("unchecked")

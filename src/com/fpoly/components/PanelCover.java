@@ -5,7 +5,6 @@
  */
 package com.fpoly.components;
 
-import com.fpoly.swing.Button;
 import com.fpoly.swing.ButtonOutLine;
 import java.awt.Color;
 import java.awt.Font;
@@ -17,7 +16,7 @@ import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Locale;
-import javax.swing.Icon;
+
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import net.miginfocom.swing.MigLayout;
@@ -141,7 +140,7 @@ public class PanelCover extends javax.swing.JPanel {
     private void login(boolean login) {
        if(isLogin != login) {
             if(login) {
-            title.setText("WELLCOM TO EGO");
+            title.setText("WELLCOM TO LEA");
             description.setText("Enter your personal details");
             description1.setText("and start a amazing trip with us");
             button.setText("SIGN UP");
